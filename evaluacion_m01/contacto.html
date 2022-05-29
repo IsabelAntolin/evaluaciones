@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Noticias</title>
+  <title>Contacto</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
@@ -13,81 +13,77 @@
 
 <body>
   <!-- _______________________________________________________________ -->
-  <nav class="navbar navbar-expand-lg  pr border-bottom border-5 border-dark">
+  <nav class="navbar navbar-expand-lg border-bottom border-5 border-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.html"><img src="logo.png" alt="" class="logo">VillaricaTour</a>
+      <a class="navbar-brand" href="index.html"><img src="logo.png" alt="" class="logo">VillaricaTour</a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="noticias.html">Noticias</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contacto.html">Contacto</a>
-                </li>
-            </ul>
-        </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="noticias.html">Noticias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contacto.html">Contacto</a>
+          </li>
+        </ul>
+      </div>
     </div>
-</nav>
+  </nav>
   <!-- _______________________________________________________________ -->
 
-  <section id="body_contacto" class="pt-5 pb-5">
-    <div class="container" id="container">
+  <section class="bg_contacto  pt-5 pb-5">
+    <div class="container">
       <h1 class="text-center text-light">Contacto</h1>
+
       <div class="row">
-        <div class="col-12 col-md-4 mx-auto">
-          <form action="" method="post">
-            <label class="d-block mb-3" for="">Nombre Completo</label>
-            <input type="text" name="" id="" placeholder="Primer Nombre" class="campo" required="required">
-            <input type="text" name="" id="" placeholder="Apellidos" class="campo mt-2" required="required">
+        <div class="col-sm-12 col-lg-4 d-flex justify-content-center">
+          <form action="https://formspree.io/f/xrgjjbnp" method="post" class="w-50">
 
-            <label class="d-block  mt-2" for="">Email</label>
-            <input class="campo w-100  mt-2" type="email" name="" id="" placeholder="Correo" required="required">
-
+            <label class="d-block mb-2 text-white">Nombre Completo</label>
+            <input type="text" name="nombre" id="" placeholder="Nombre" class="form-control mb-2" required="required">
+            <input type="text" name="apellido" id="" placeholder="Apellidos" class="d-block form-control mb-2"
+              required="required">
+            <label class="d-block mb-2 text-white" for="">Email</label>
+            <input class="form-control" type="email" name="correo" id="" placeholder="Correo" required="required">
             <div>
-              <label class="d-block mt-2">Situacion</label>
-              <label> <input type="radio" name="gen" id="" value=""> Reclamo</label>
-              <label> <input type="radio" name="gen" id="" value="" required="required"> Consulta</label>
+              <label class="d-block mt-2 text-white">Situacion</label>
+              <label class="text-white"> <input type="radio" name="situacion" id="" value="reclamo"> Reclamo</label>
+              <label class="text-white"> <input type="radio" name="consulta" id="" value="consulta" required="required">
+                Consulta</label>
             </div>
-
-            <label class="d-block  mt-2">Genero</label>
+            <label class="d-block  mt-2 text-white">Genero</label>
             <!--validar required< -->
-            <select name="" id="" class="form-select  mt-2" ">
+            <select name="genero" id="" class="form-select  mt-2" ">
                             <option selected disabled >Seleccionar</option>
-                            <option value="">Femenino</option>
-                            <option value="">Masculino</option>
-                            
-                        </select>
+                            <option value=" femenino">Femenino</option>
+              <option value="masculino">Masculino</option>
+            </select>
+            <label class=" d-block mt-2 text-white" for="">Ingresar Comentario</label>
+            <textarea class="form-control  mt-2" name="comentario" id="" rows="3" required="required"></textarea>
 
-                        <label class=" d-block mt-2" for="">Ingresar Comentario</label>
-              <textarea class="form-control  mt-2" name="" id="" rows="3" required="required"></textarea>
-
-              <button tipe="submit" class="btn d-block btn-primary my-4 w-50 mx-auto">Enviar</button>
+            <button tipe="submit" class="btn d-block btn-primary my-4">Enviar</button>
           </form>
         </div>
 
-        <div class=" col-12 col-md-3 mt-3 ">
+        <div class=" col-sm-12 col-lg-4 mt-3 d-flex justify-content-center">
           <div class="text-light ">
             <p><i class="bi bi-envelope"></i> Trekking.full@gmail.com</p>
-            <p><i class="bi bi-geo-alt"></i> Los Lingues #1100, Villarrica.
-            </p>
+            <p><i class="bi bi-geo-alt"></i> Los Lingues #1100, Villarrica.</p>
             <p><i class="bi bi-telephone"></i> +569 45632142 +569 66565477</p>
             <i class="bi bi-alarm"></i>
             <p class="d-inline-block"> Lunes a Sabado : 10:00 a 18:00</p>
-
           </div>
         </div>
 
-        <div class="col-12 col-md-4 ">
-          <iframe id="map"
+        <div class="col-sm-12 col-lg-4 d-flex justify-content-center">
+          <iframe class="w-100"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12352.200570602321!2d-72.2477630447943!3d-39.287113365620115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9614623c8e00fe6f%3A0xe7812f04b9706fcc!2sVillarrica%2C%20Araucan%C3%ADa!5e0!3m2!1ses-419!2scl!4v1653683172138!5m2!1ses-419!2scl"
             width="250" height="400" " allowfullscreen="" loading=" lazy" referrerpolicy="no-referrer-when-downgrade"
             class="mt-4 border border-2 border-dark rounded"></iframe>
@@ -95,24 +91,25 @@
       </div>
     </div>
   </section>
-  <footer class="pr">
+
+  <footer class="bg-footer ps-3">
     <div class="row">
-        <div class="col-12 col-md-4">
-            <p>Términos y Condiciones</p>
-        </div>
-        <div class="col-12 col-md-4">                
-            <p>Preguntas Frecuentes</p>                
-        </div>
-        <div class="col-12 col-md-4">
-            <p>Garantia de compra segura</p>
-        </div>
+      <div class="col-sm-12 col-lg-4">
+        <p>Términos y Condiciones</p>
+      </div>
+      <div class="col-sm-12 col-lg-4">
+        <p>Preguntas Frecuentes</p>
+      </div>
+      <div class="col-sm-12 col-lg-4">
+        <p>Garantia de compra segura</p>
+      </div>
     </div>
     <div class="row">
-        <div class="col-12">
-            <p class="text-center p1">@Copyright Isabel Antolin Lopez, 2022</p>
-        </div>
+      <div class="col-sm-12">
+        <p class="text-center p1">@Copyright Isabel Antolin Lopez, 2022</p>
+      </div>
     </div>
-</footer>
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>
